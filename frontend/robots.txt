@@ -1,0 +1,38 @@
+# Robots.txt for المعهد البريطاني - British Council Institute
+# This file tells search engine crawlers which pages they can and cannot access
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Disallow access to admin areas for security
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backend/
+Disallow: /config/
+Disallow: /src/
+Disallow: /node_modules/
+
+# Disallow access to sensitive files
+Disallow: *.json
+Disallow: *.log
+Disallow: *.env
+Disallow: *.config
+Disallow: /package.json
+Disallow: /vite.config.ts
+Disallow: /tailwind.config.js
+
+# Allow access to public assets
+Allow: /assets/
+Allow: /robots.txt
+Allow: /sitemap.xml
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Additional sitemaps for different sections
+Sitemap: https://yourdomain.com/sitemap-exams.xml
+Sitemap: https://yourdomain.com/sitemap-results.xml
